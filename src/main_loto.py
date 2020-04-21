@@ -31,9 +31,9 @@ def better_display(grid_list):
 
     print("Enfin le numéro complémentaire est", grid_list[-1])
 
-def create_output_text(grid_list):
+def create_output_text(grid_list, path_file):
     """ Function to create text file with grid numbers. """
-    with open("numeros_gagnants.txt", "a") as f:
+    with open(path_file+"numeros_gagnants.txt", "a") as f:
         f.write(str(grid_list))
         f.write("\n")
 
@@ -49,4 +49,4 @@ if __name__ == "__main__":
     better_display(WIN_NUMBER)
 
     # Create text file with all numbers.
-    create_output_text(WIN_NUMBER)
+    create_output_text(WIN_NUMBER, "results/")
