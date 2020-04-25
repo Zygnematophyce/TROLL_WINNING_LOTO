@@ -17,6 +17,9 @@ def create_loto_win_grid():
             random_number = random.randint(1, 49)
         win_array.append(random_number)
 
+    # tri ascendant sur la liste
+    win_array.sort()
+
     # Add the complementary number between 1 to 10.
     win_array.append(random.randint(1, 10))
 
@@ -24,10 +27,9 @@ def create_loto_win_grid():
     return win_array
 
 def better_display(grid_list):
-    """ Function that presents the results. """
+    """ Function that diplay the results. """
     for i in range(0, len(grid_list)-1):
-        print("Le numéro {} est {}".format(i
-                                           +1, grid_list[i]))
+        print("Le numéro {} est {}".format(i+1, grid_list[i]))
 
     print("Enfin le numéro complémentaire est", grid_list[-1])
 
